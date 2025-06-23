@@ -50,7 +50,7 @@ const RegisterPage = () => {
     e.preventDefault();
     e.stopPropagation();
 
-    const URL = `http://localhost:8080/api/register`;
+    const URL = `https://linkup-v0mp.onrender.com/api/register`;
 
     try {
       const response = await axios.post(URL, data);

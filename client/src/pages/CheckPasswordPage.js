@@ -39,7 +39,7 @@ const CheckPasswordPage = () => {
     e.preventDefault()
     e.stopPropagation()
 
-    const URL = `http://localhost:8080/api/password`
+    const URL = `https://linkup-v0mp.onrender.com/api/password`
 
     try {
         const response = await axios({

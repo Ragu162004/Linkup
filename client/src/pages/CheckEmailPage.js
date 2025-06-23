@@ -27,7 +27,7 @@ const CheckEmailPage = () => {
     e.preventDefault()
     e.stopPropagation()
 
-    const URL = `http://localhost:8080/api/email`
+    const URL = `https://linkup-v0mp.onrender.com/api/email`
 
     try {
         const response = await axios.post(URL,data)

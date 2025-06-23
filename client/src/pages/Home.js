@@ -21,7 +21,7 @@ const Home = () => {
   console.log("user", user);
   const fetchUserDetails = async () => {
     try {
-      const URL = `http://localhost:8080/api/user-details`;
+      const URL = `https://linkup-v0mp.onrender.com/api/user-details`;
       const response = await axios({
         url: URL,
         withCredentials: true,
