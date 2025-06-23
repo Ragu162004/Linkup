@@ -49,6 +49,8 @@ const Home = () => {
       auth: {
         token: localStorage.getItem("token"),
       },
+      transports: ['websocket'],
+      withCredentials: true
     });
 
     socketConnection.on("onlineUser", (data) => {
@@ -76,9 +78,8 @@ const Home = () => {
       </section>
 
       <div
-        className={`justify-center items-center flex-col gap-2 hidden ${
-          !basePath ? "hidden" : "lg:flex"
-        }`}
+        className={`justify-center items-center flex-col gap-2 hidden ${!basePath ? "hidden" : "lg:flex"
+          }`}
       >
         <p className="text-lg mt-2 text-gray-400">
           Select user to send message

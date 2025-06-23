@@ -10,11 +10,13 @@ const app = express()
 
 const server = http.createServer(app)
 const io = new Server(server, {
-  cors: {
-    origin: [process.env.FRONTEND_URL, "https://linkup-omega-two.vercel.app"],
-    credentials: true
-  }
+    cors: {
+        origin: [process.env.FRONTEND_URL],
+        methods: ["GET", "POST"],
+        credentials: true
+    }
 })
+
 
 const onlineUser = new Set()
 
@@ -98,7 +100,7 @@ io.on('connection', async (socket) => {
             ]
         }).populate({
             path: 'messages',
-            options: { sort: { createdAt: 1 } } 
+            options: { sort: { createdAt: 1 } }
         });
 
 

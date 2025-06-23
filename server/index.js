@@ -9,9 +9,10 @@ const { app, server } = require('./socket/index');
 
 // Configure CORS
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
+    origin: [process.env.FRONTEND_URL],
     credentials: true
 }));
+
 
 // Middleware setup
 app.use(express.json());
