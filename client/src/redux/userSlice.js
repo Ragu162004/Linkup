@@ -35,6 +35,7 @@ export const userSlice = createSlice({
       state.onlineUser = action.payload
     },
     setSocketConnection : (state,action)=>{
+      console.log("from store" + action.payload);
       state.socketConnection = action.payload
     }
   },
